@@ -54,7 +54,7 @@ mongoose.connect('mongodb://localhost:27017/trello', {
   .catch(error => console.error('Failed to connect to MongoDB', error));
 
  Replace your_database_name with the name of your MongoDB database.
- 
+
 ## Running the Project
 
 After installing the project and the required libraries, you can run the project using the following steps:
@@ -63,4 +63,4 @@ After installing the project and the required libraries, you can run the project
 2. In the command line, run the server using the following command: npm run dev
    This will start the server and the project will be accessible at the specified URL.
 
-Feel free to modify this `Readme.md` file as per your project requirements.
+ 
