@@ -55,6 +55,29 @@ mongoose.connect('mongodb://localhost:27017/trello', {
 ```
 
  Replace your_database_name with the name of your MongoDB database.
+ your database should contain at least two collections called columns and tasks with the following schema:
+ columns
+ ```
+{
+  "title": "ToDO",
+  "tasks": [
+    {
+      "$oid": "645c9d3221b303196be38f75"
+    },
+    {
+      "$oid": "645f6e8940bf922c26933496"
+    } 
+  ],
+  "__v": 18
+}
+ ```
+ tasks
+ ```
+{
+  "title": "Task 1 ",
+  "__v": 0
+}
+ ```
 
 ## Running the Project
 
