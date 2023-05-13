@@ -1,29 +1,66 @@
-# to-do-vue
+ 
+## Installation
 
-This template should help get you started developing with Vue 3 in Vite.
+Please follow the steps below to install the project on your machine:
 
-## Recommended IDE Setup
+1. Install Node.js from the official website: https://nodejs.org
+2. Install MongoDB from the official website: https://www.mongodb.com
+3. Clone the project from GitHub using the following command in the command line: git clone https://github.com/AhmedAlEssam/VueChattest it may change in feature to https://github.com/AhmedAlEssam/VueToDoList
+4. Navigate to the cloned project folder: cd VueChattest or cd VueToDoList
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
 
-## Customize configuration
+## Platforms and Libraries Required
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+The project requires the following platforms and libraries to be installed:
 
-## Project Setup
+- Node.js
+- Express
+- MongoDB
+- Nodemon (optional - helps with automatic server restart on changes)
+- Axios
+- Cors
+- Body Parser
+- Cli-table
+- Tailwind CSS
+- Vuedraggable
 
-```sh
-npm install
-```
+Make sure to install these platforms and libraries on your machine before running the project, using : npm install
 
-### Compile and Hot-Reload for Development
+## Using Seeds
 
-```sh
-npm run dev
-```
+The project provides Seeds for inserting default data into the database. To use them, uncomment seeds line in server.js
 
-### Compile and Minify for Production
+This will insert default data into the database associated with the project.
 
-```sh
-npm run build
-```
+## Setting Up MongoDB
+To run your project locally, you'll need to set up MongoDB on your machine. Here are the steps to follow:
+
+1. Install MongoDB: Visit the MongoDB download page https://www.mongodb.com/try/download/community and download the appropriate version of MongoDB for your operating system. Follow the installation instructions specific to your OS.
+2. Start MongoDB: After installation, you need to start the MongoDB server. Open a terminal or command prompt and run the following command: mongod
+3. Create a Database: Once the MongoDB server is running, you can create a database for your project. Open another terminal or command prompt and run the following command to start the MongoDB shell: mongo 
+   In the MongoDB shell, run the following command to create a new database: use trello
+   Replace your_database_name with the desired name for your database.
+
+4. Connect to MongoDB: In your Node.js application, you need to establish a connection to MongoDB. You can use the mongoose library for this purpose. Install it by running the following command in your project directory: npm install mongoose
+In your code, use the following snippet to connect to MongoDB:
+const mongoose = require('mongoose');
+
+// Connect to MongoDB
+mongoose.connect('mongodb://localhost:27017/trello', {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+})
+  .then(() => console.log('Connected to MongoDB'))
+  .catch(error => console.error('Failed to connect to MongoDB', error));
+
+ Replace your_database_name with the name of your MongoDB database.
+ 
+## Running the Project
+
+After installing the project and the required libraries, you can run the project using the following steps:
+
+1. Start the MongoDB database.
+2. In the command line, run the server using the following command: npm run dev
+   This will start the server and the project will be accessible at the specified URL.
+
+Feel free to modify this `Readme.md` file as per your project requirements.
