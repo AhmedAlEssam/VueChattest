@@ -59,6 +59,9 @@ mongoose.connect('mongodb://localhost:27017/trello', {
  columns
  ```
 {
+  "_id": {
+    "$oid": "645caeaca879fb3971c31978"
+  },
   "title": "ToDO",
   "tasks": [
     {
@@ -66,7 +69,7 @@ mongoose.connect('mongodb://localhost:27017/trello', {
     },
     {
       "$oid": "645f6e8940bf922c26933496"
-    } 
+    }
   ],
   "__v": 18
 }
@@ -74,6 +77,9 @@ mongoose.connect('mongodb://localhost:27017/trello', {
  tasks
  ```
 {
+  "_id": {
+    "$oid": "645f786222884a84668f1311"
+  },
   "title": "Task 1 ",
   "__v": 0
 }
